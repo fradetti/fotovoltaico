@@ -16,6 +16,7 @@ const UNITS = {
 const TYPE_UNITS = {
   monthly: ["spec", "specDay", "kwh", "index"],
   yoy: ["spec", "specDay", "kwh"],
+  cum: ["kwh", "spec"],
   rank: ["index", "spec", "specDay", "kwh"],
   heat: ["index", "spec", "specDay", "kwh"],
 };
@@ -169,7 +170,7 @@ function buildFilters() {
   });
 
   $("#chart-type").value = state.type;
-  $("#chart-type").onchange = (e) => { state.type = e.target.value; renderChart(); };
+  $("#chart-type").onchange = (e) => { state.type = e.target.value; state.unit = TYPE_UNITS[state.type][0]; renderChart(); };
   $("#chart-unit").onchange = (e) => { state.unit = e.target.value; renderChart(); };
 
   const yp = $("#yoy-plant");
@@ -232,11 +233,12 @@ function renderChart() {
   const us = $("#chart-unit");
   us.innerHTML = units.map((u) => `<option value="${u}">${UNITS[u].label}</option>`).join("");
   us.value = state.unit;
-  $("#yoy-plant-field").classList.toggle("hidden", state.type !== "yoy");
+  const perPlant = state.type === "yoy" || state.type === "cum";
+  $("#yoy-plant-field").classList.toggle("hidden", !perPlant);
 
-  if (state.months.size === 0) return emptyChart("Seleziona almeno un mese.");
-  if (state.type !== "yoy" && state.plantSel.size === 0) return emptyChart("Seleziona almeno un impianto.");
-  ({ monthly: renderMonthly, yoy: renderYoy, rank: renderRankChart, heat: renderHeat })[state.type]();
+  if (state.months.size === 0 && state.type !== "cum") return emptyChart("Seleziona almeno un mese.");
+  if (!perPlant && state.plantSel.size === 0) return emptyChart("Seleziona almeno un impianto.");
+  ({ monthly: renderMonthly, yoy: renderYoy, cum: renderCumulative, rank: renderRankChart, heat: renderHeat })[state.type]();
 }
 
 function lineDataset(label, data, color, extra = {}) {
@@ -332,6 +334,60 @@ function renderYoy() {
     data: { labels: ms.map((m) => MESI_BREVI[m - 1]), datasets },
     options: lineOptions(u, (it) => `${plantName(pid)} · ${MESI[ms[it[0].dataIndex] - 1]}`),
   });
+  legend(datasets.map((d) => ({ label: d.label, color: d.baseColor })));
+}
+
+/** Cumulato da gennaio, per anno. null nei mesi senza lettura (la linea si interrompe). */
+function cumulativeSeries(pid, year, unit) {
+  let acc = 0;
+  return ALL_MONTHS.map((m) => {
+    const r = rowAt(pid, year, m);
+    if (!r) return null;
+    acc += unit === "kwh" ? r.kwh : r.spec;
+    return acc;
+  });
+}
+
+function renderCumulative() {
+  const u = state.unit, pid = state.yoyPlant, U = UNITS[u];
+  const years = [...new Set(state.rows.filter((r) => r.plant_id === pid).map((r) => r.year))].sort();
+  if (!years.length) return emptyChart("Nessun dato per questo impianto.");
+  const cur = years.includes(state.year) ? state.year : years.at(-1);
+  $("#chart-title").textContent = `Cumulato anno su anno · ${plantName(pid)}`;
+  $("#chart-sub").textContent = `${U.label} accumulati da gennaio; la linea più spessa è il ${cur} (i filtri mesi/trimestre non si applicano)`;
+
+  // confronto "a questo punto dell'anno": stessi mesi registrati in entrambi gli anni
+  const curRows = state.rows.filter((r) => r.plant_id === pid && r.year === cur);
+  const lastM = Math.max(...curRows.map((r) => r.month));
+  const val = (r) => (u === "kwh" ? r.kwh : r.spec);
+  const prevAll = state.rows.filter((r) => r.plant_id === pid && r.year === cur - 1 && r.month <= lastM);
+  const prevMonths = new Set(prevAll.map((r) => r.month));
+  const curMonths = new Set(curRows.map((r) => r.month));
+  // se i due anni non hanno gli stessi mesi, confronta solo quelli presenti in entrambi
+  const partial = prevAll.length > 0 && (prevAll.length !== curRows.length || prevAll.some((r) => !curMonths.has(r.month)));
+  const curCmp = partial ? curRows.filter((r) => prevMonths.has(r.month)) : curRows;
+  const prevRows = partial ? prevAll.filter((r) => curMonths.has(r.month)) : prevAll;
+  const totCur = curCmp.reduce((a, r) => a + val(r), 0);
+  const totPrev = prevRows.reduce((a, r) => a + val(r), 0);
+  const d = totPrev ? (totCur / totPrev - 1) * 100 : null;
+  const dec = u === "kwh" ? 0 : 1;
+  const stats = `<div class="cum-stats">
+      <div><span class="k">${partial ? `${cur}, stessi mesi` : `Fino a ${MESI[lastM - 1].toLowerCase()} ${cur}`}</span><span class="v">${fmt(totCur, dec)} <small>${U.short}</small></span></div>
+      <div><span class="k">${partial ? `${cur - 1}, stessi mesi` : `Stesso periodo ${cur - 1}`}</span><span class="v">${prevRows.length ? `${fmt(totPrev, dec)} <small>${U.short}</small>` : "–"}</span></div>
+      <div><span class="k">Differenza</span><span class="v ${d == null ? "" : d >= 0 ? "delta-up" : "delta-down"}">${d == null ? "–"
+        : `${d >= 0 ? "▲ +" : "▼ −"}${fmt(Math.abs(totCur - totPrev), dec)} <small>(${d >= 0 ? "+" : "−"}${fmt(Math.abs(d), 1)}%)</small>`}</span></div>
+      ${partial ? `<p class="sub">Il ${cur - 1} ha mesi mancanti: il confronto usa solo i ${prevRows.length} mesi registrati in entrambi gli anni (${prevRows.map((r) => MESI_BREVI[r.month - 1].toLowerCase()).join(", ")}).</p>` : ""}
+    </div>`;
+
+  const colors = yearRamp(years.length);
+  const datasets = years.map((y, i) =>
+    lineDataset(String(y), cumulativeSeries(pid, y, u), colors[i],
+      { borderWidth: y === cur ? 3 : 2, tension: 0.15, spanGaps: true }));
+  const canvas = freshCanvas(`Produzione cumulata ${plantName(pid)}`);
+  $("#chart-area").insertAdjacentHTML("afterbegin", stats);
+  const opts = lineOptions(u, (it) => `${plantName(pid)} · fino a ${MESI[it[0].dataIndex].toLowerCase()}`);
+  opts.scales.y.title.text = `${U.label} cumulati`;
+  chart = new window.Chart(canvas, { type: "line", data: { labels: MESI_BREVI, datasets }, options: opts });
   legend(datasets.map((d) => ({ label: d.label, color: d.baseColor })));
 }
 

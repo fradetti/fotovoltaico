@@ -258,3 +258,11 @@ table.heat td.tot { font-weight: 600; }
 table.heat td.tot.plain { background: var(--surface-2); }
 .scale .bar.div { background: linear-gradient(90deg, var(--div-neg), var(--div-mid), var(--div-pos)); }
 .scale .bar.seq { background: linear-gradient(90deg, color-mix(in oklab, var(--div-pos) 8%, var(--div-mid)), var(--div-pos)); }
+
+.cum-stats { display: flex; flex-wrap: wrap; gap: 8px 32px; margin-bottom: 16px; padding: 12px 14px; border-radius: 8px; background: var(--surface-2); }
+.cum-stats > div { display: flex; flex-direction: column; }
+.cum-stats .k { font-size: 12px; color: var(--muted); }
+.cum-stats .v { font-size: 22px; font-weight: 600; }
+.cum-stats .v small { font-size: 13px; font-weight: 500; color: var(--muted); }
+.cum-stats .v.delta-up small, .cum-stats .v.delta-down small { color: inherit; }
+.cum-stats .sub { flex-basis: 100%; margin: 0; }
