@@ -1,0 +1,1570 @@
+{
+ "plants": [
+  {
+   "id": 1,
+   "name": "Harbi Casa"
+  },
+  {
+   "id": 2,
+   "name": "Fradetti"
+  },
+  {
+   "id": 3,
+   "name": "Pcoso"
+  },
+  {
+   "id": 4,
+   "name": "Pistus"
+  },
+  {
+   "id": 5,
+   "name": "Harbi Ufficio"
+  },
+  {
+   "id": 6,
+   "name": "Enta"
+  },
+  {
+   "id": 7,
+   "name": "Luca69"
+  }
+ ],
+ "readings": [
+  {
+   "plant_id": 1,
+   "year": 2023,
+   "month": 7,
+   "kwh": 2720.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2023,
+   "month": 7,
+   "kwh": 1110.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2023,
+   "month": 7,
+   "kwh": 450.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2023,
+   "month": 7,
+   "kwh": 3050.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2023,
+   "month": 8,
+   "kwh": 2249.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2023,
+   "month": 8,
+   "kwh": 915.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2023,
+   "month": 8,
+   "kwh": 435.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2023,
+   "month": 8,
+   "kwh": 2490.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2023,
+   "month": 9,
+   "kwh": 1680.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2023,
+   "month": 9,
+   "kwh": 706.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2023,
+   "month": 9,
+   "kwh": 333.0,
+   "kwp": 2.94,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2023,
+   "month": 9,
+   "kwh": 1792.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2023,
+   "month": 10,
+   "kwh": 960.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2023,
+   "month": 10,
+   "kwh": 424.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2023,
+   "month": 10,
+   "kwh": 220.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2023,
+   "month": 10,
+   "kwh": 1131.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2023,
+   "month": 11,
+   "kwh": 649.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2023,
+   "month": 11,
+   "kwh": 273.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2023,
+   "month": 11,
+   "kwh": 131.0,
+   "kwp": 2.94,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2023,
+   "month": 11,
+   "kwh": 562.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2023,
+   "month": 12,
+   "kwh": 402.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2023,
+   "month": 12,
+   "kwh": 176.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2023,
+   "month": 12,
+   "kwh": 139.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2023,
+   "month": 12,
+   "kwh": 461.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 1,
+   "kwh": 488.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 1,
+   "kwh": 442.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 1,
+   "kwh": 230.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 1,
+   "kwh": 166.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 1,
+   "kwh": 538.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 2,
+   "kwh": 684.0,
+   "kwp": 16.28,
+   "days": 29
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 2,
+   "kwh": 570.0,
+   "kwp": 10.0,
+   "days": 29
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 2,
+   "kwh": 320.0,
+   "kwp": 6.29,
+   "days": 29
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 2,
+   "kwh": 176.0,
+   "kwp": 2.94,
+   "days": 29
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 2,
+   "kwh": 812.0,
+   "kwp": 19.9,
+   "days": 29
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 3,
+   "kwh": 1130.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 3,
+   "kwh": 826.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 3,
+   "kwh": 513.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 3,
+   "kwh": 249.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 3,
+   "kwh": 1064.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 4,
+   "kwh": 1880.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 4,
+   "kwh": 1445.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 4,
+   "kwh": 824.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 4,
+   "kwh": 357.0,
+   "kwp": 2.94,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 4,
+   "kwh": 2145.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 5,
+   "kwh": 2020.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 5,
+   "kwh": 1358.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 5,
+   "kwh": 1000.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 5,
+   "kwh": 325.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 5,
+   "kwh": 2981.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 6,
+   "kwh": 2230.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 6,
+   "kwh": 1512.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 6,
+   "kwh": 833.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 6,
+   "kwh": 368.0,
+   "kwp": 2.94,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 6,
+   "kwh": 2817.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 7,
+   "kwh": 2612.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 7,
+   "kwh": 1800.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 7,
+   "kwh": 1070.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 7,
+   "kwh": 424.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 7,
+   "kwh": 3012.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 8,
+   "kwh": 2260.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 8,
+   "kwh": 1681.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 8,
+   "kwh": 991.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 8,
+   "kwh": 406.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 8,
+   "kwh": 2564.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 9,
+   "kwh": 1328.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 9,
+   "kwh": 1116.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 9,
+   "kwh": 608.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 9,
+   "kwh": 253.0,
+   "kwp": 2.94,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 9,
+   "kwh": 1706.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 10,
+   "kwh": 567.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 10,
+   "kwh": 522.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 10,
+   "kwh": 364.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 10,
+   "kwh": 153.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 10,
+   "kwh": 984.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 11,
+   "kwh": 483.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 11,
+   "kwh": 424.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 11,
+   "kwh": 281.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 11,
+   "kwh": 176.0,
+   "kwp": 2.94,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 11,
+   "kwh": 591.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2024,
+   "month": 12,
+   "kwh": 470.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2024,
+   "month": 12,
+   "kwh": 399.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2024,
+   "month": 12,
+   "kwh": 221.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2024,
+   "month": 12,
+   "kwh": 149.5,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2024,
+   "month": 12,
+   "kwh": 368.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 1,
+   "kwh": 379.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 1,
+   "kwh": 325.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 1,
+   "kwh": 218.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 1,
+   "kwh": 118.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 1,
+   "kwh": 502.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 2,
+   "kwh": 539.0,
+   "kwp": 16.28,
+   "days": 28
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 2,
+   "kwh": 455.0,
+   "kwp": 10.0,
+   "days": 28
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 2,
+   "kwh": 229.0,
+   "kwp": 6.29,
+   "days": 21
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 2,
+   "kwh": 150.0,
+   "kwp": 2.94,
+   "days": 28
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 2,
+   "kwh": 791.0,
+   "kwp": 19.9,
+   "days": 28
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 3,
+   "kwh": 1363.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 3,
+   "kwh": 1082.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 3,
+   "kwh": 374.0,
+   "kwp": 6.29,
+   "days": 15
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 3,
+   "kwh": 271.0,
+   "kwp": 2.94,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 3,
+   "kwh": 1524.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 4,
+   "kwh": 1809.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 4,
+   "kwh": 1312.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 4,
+   "kwh": 709.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 4,
+   "kwh": 336.0,
+   "kwp": 2.94,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 4,
+   "kwh": 2321.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 5,
+   "kwh": 2348.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 5,
+   "kwh": 1562.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 5,
+   "kwh": 1050.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 5,
+   "kwh": 649.0,
+   "kwp": 5.61,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 5,
+   "kwh": 2739.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 6,
+   "kwh": 1828.0,
+   "kwp": 16.28,
+   "days": 22
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 6,
+   "kwh": 1633.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 6,
+   "kwh": 1090.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 6,
+   "kwh": 1067.0,
+   "kwp": 8.11,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 6,
+   "kwh": 3149.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 7,
+   "kwh": 2540.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 7,
+   "kwh": 1690.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 7,
+   "kwh": 1060.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 7,
+   "kwh": 1111.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 7,
+   "kwh": 2890.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 8,
+   "kwh": 2147.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 8,
+   "kwh": 1519.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 8,
+   "kwh": 907.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 8,
+   "kwh": 974.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 8,
+   "kwh": 2605.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 9,
+   "kwh": 1510.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 9,
+   "kwh": 1161.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 9,
+   "kwh": 725.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 9,
+   "kwh": 749.0,
+   "kwp": 8.11,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 9,
+   "kwh": 1698.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 10,
+   "kwh": 976.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 10,
+   "kwh": 629.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 10,
+   "kwh": 451.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 10,
+   "kwh": 611.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 10,
+   "kwh": 1143.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 11,
+   "kwh": 511.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 11,
+   "kwh": 520.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 11,
+   "kwh": 279.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2025,
+   "month": 11,
+   "kwh": 423.0,
+   "kwp": 8.11,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 11,
+   "kwh": 607.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2025,
+   "month": 12,
+   "kwh": 365.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2025,
+   "month": 12,
+   "kwh": 290.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2025,
+   "month": 12,
+   "kwh": 183.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2025,
+   "month": 12,
+   "kwh": 415.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 1,
+   "kwh": 330.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 1,
+   "kwh": 259.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 1,
+   "kwh": 217.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 1,
+   "kwh": 392.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 1,
+   "kwh": 493.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 2,
+   "kwh": 690.0,
+   "kwp": 16.28,
+   "days": 28
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 2,
+   "kwh": 589.0,
+   "kwp": 10.0,
+   "days": 28
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 2,
+   "kwh": 352.0,
+   "kwp": 6.29,
+   "days": 28
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 2,
+   "kwh": 511.0,
+   "kwp": 8.11,
+   "days": 28
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 2,
+   "kwh": 806.0,
+   "kwp": 19.9,
+   "days": 28
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 3,
+   "kwh": 1440.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 3,
+   "kwh": 1078.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 3,
+   "kwh": 594.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 3,
+   "kwh": 793.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 3,
+   "kwh": 1574.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 4,
+   "kwh": 1839.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 4,
+   "kwh": 1449.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 4,
+   "kwh": 773.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 4,
+   "kwh": 937.0,
+   "kwp": 8.11,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 4,
+   "kwh": 2206.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 5,
+   "kwh": 2443.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 5,
+   "kwh": 1584.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 5,
+   "kwh": 1070.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 5,
+   "kwh": 1086.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 5,
+   "kwh": 2763.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 6,
+   "kwh": 2750.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 6,
+   "kwh": 1692.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 6,
+   "kwh": 1040.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 6,
+   "kwh": 1200.0,
+   "kwp": 8.11,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 6,
+   "kwh": 3196.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 6,
+   "year": 2026,
+   "month": 7,
+   "kwh": 2083.0,
+   "kwp": 11.5,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 7,
+   "kwh": 2720.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 7,
+   "kwh": 1727.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 7,
+   "kwh": 1100.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 7,
+   "kwh": 1208.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 7,
+   "kwh": 3084.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 6,
+   "year": 2026,
+   "month": 8,
+   "kwh": 1825.0,
+   "kwp": 11.5,
+   "days": 31
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 8,
+   "kwh": 2240.0,
+   "kwp": 16.28,
+   "days": 31
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 8,
+   "kwh": 1507.0,
+   "kwp": 10.0,
+   "days": 31
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 8,
+   "kwh": 892.0,
+   "kwp": 6.29,
+   "days": 31
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 8,
+   "kwh": 1016.0,
+   "kwp": 8.11,
+   "days": 31
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 8,
+   "kwh": 2361.0,
+   "kwp": 19.9,
+   "days": 31
+  },
+  {
+   "plant_id": 6,
+   "year": 2026,
+   "month": 9,
+   "kwh": 1371.0,
+   "kwp": 11.5,
+   "days": 30
+  },
+  {
+   "plant_id": 1,
+   "year": 2026,
+   "month": 9,
+   "kwh": 1710.0,
+   "kwp": 16.28,
+   "days": 30
+  },
+  {
+   "plant_id": 5,
+   "year": 2026,
+   "month": 9,
+   "kwh": 1263.0,
+   "kwp": 10.0,
+   "days": 30
+  },
+  {
+   "plant_id": 2,
+   "year": 2026,
+   "month": 9,
+   "kwh": 641.0,
+   "kwp": 6.29,
+   "days": 30
+  },
+  {
+   "plant_id": 3,
+   "year": 2026,
+   "month": 9,
+   "kwh": 878.0,
+   "kwp": 8.11,
+   "days": 30
+  },
+  {
+   "plant_id": 4,
+   "year": 2026,
+   "month": 9,
+   "kwh": 1849.0,
+   "kwp": 19.9,
+   "days": 30
+  },
+  {
+   "plant_id": 7,
+   "year": 2026,
+   "month": 9,
+   "kwh": 602.0,
+   "kwp": 6.1,
+   "days": 30
+  }
+ ]
+}
