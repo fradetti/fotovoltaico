@@ -3,6 +3,9 @@ import {
   MESI, MESI_BREVI, fmt, seriesColor, cssVar, enrich, monthlyIndex, periodSummary, esc,
 } from "./common.js";
 import { createMultiSelect } from "./multiselect.js";
+import { track } from "./track.js";
+
+track("dashboard");
 
 const $ = (s) => document.querySelector(s);
 const tip = $("#tip");

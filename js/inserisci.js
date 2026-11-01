@@ -1,5 +1,8 @@
 import { getPlants, getReadings, saveReading, deleteReading, changePin, MODE } from "./api.js";
 import { MESI, fmt, daysInMonth, esc } from "./common.js";
+import { track } from "./track.js";
+
+track("inserisci");
 
 const $ = (s) => document.querySelector(s);
 const f = {

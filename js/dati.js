@@ -1,6 +1,9 @@
 import { getPlants, getReadings, MODE } from "./api.js";
 import { MESI, fmt, seriesColor, enrich, monthlyIndex, esc } from "./common.js";
 import { createMultiSelect } from "./multiselect.js";
+import { track } from "./track.js";
+
+track("dati");
 
 const $ = (s) => document.querySelector(s);
 const state = { plants: [], rows: [], idx: new Map(), year: "all", plantSel: new Set(), sort: { key: "date", dir: -1 } };

@@ -137,6 +137,31 @@ const supa = {
   },
 };
 
+/* ---------------- Visite (solo Supabase) ---------------- */
+
+export async function logVisit(p) {
+  if (MODE !== "supabase") return;
+  await (await client()).rpc("log_visit", {
+    p_page: p.page, p_visitor: p.visitor, p_referrer: p.referrer, p_device: p.device,
+  });
+}
+
+export async function visitStats(days) {
+  if (MODE !== "supabase") throw new Error("Le statistiche delle visite sono disponibili solo con Supabase");
+  const { data, error } = await (await client()).rpc("visit_stats", { p_days: days });
+  if (error) throw rpcError(error);
+  return data;
+}
+
+/** Letture con data di ultima modifica: serve a vedere chi inserisce e quando. */
+export async function getEntryActivity() {
+  if (MODE !== "supabase") return [];
+  const { data, error } = await (await client())
+    .from("readings").select("plant_id,year,month,updated_at").order("updated_at", { ascending: false }).range(0, 9999);
+  if (error) throw rpcError(error);
+  return data;
+}
+
 const impl = MODE === "supabase" ? supa : local;
 export const getPlants = () => impl.getPlants();
 export const getReadings = () => impl.getReadings();

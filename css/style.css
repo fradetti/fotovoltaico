@@ -266,3 +266,24 @@ table.heat td.tot.plain { background: var(--surface-2); }
 .cum-stats .v small { font-size: 13px; font-weight: 500; color: var(--muted); }
 .cum-stats .v.delta-up small, .cum-stats .v.delta-down small { color: inherit; }
 .cum-stats .sub { flex-basis: 100%; margin: 0; }
+
+/* ---------- statistiche ---------- */
+footer .foot-link { color: var(--muted); }
+footer .foot-link:hover { color: var(--text); }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+@media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; min-width: 0; }
+.tile .k { font-size: 13px; color: var(--muted); }
+.tile .v { font-size: 30px; font-weight: 650; letter-spacing: -0.01em; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.tile .sub { font-size: 12px; }
+.chart.short { height: 240px; }
+.barlist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(70px, max-content) 1fr auto; align-items: center; gap: 12px 14px; font-size: 14px; }
+.barlist li { display: contents; }
+.bl-label { color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bl-track { height: 10px; border-radius: 5px; background: var(--surface-2); overflow: hidden; }
+.bl-fill { display: block; height: 100%; background: var(--series-1); border-radius: 0 5px 5px 0; min-width: 2px; }
+.bl-val { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; white-space: nowrap; }
+.bl-val small { font-weight: 400; color: var(--muted); margin-left: 6px; font-size: 12px; }
+.empty-msg.small { padding: 16px 0; font-size: 14px; }
+table.data.static th { cursor: default; }
+.grid > .card + .card { margin-top: 0; }

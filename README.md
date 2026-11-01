@@ -33,3 +33,10 @@ media degli indici mensili. I mesi con un solo impianto non hanno indice.
 4. In `js/config.js` inserisci Project URL e anon key.
 
 Comandi di amministrazione (nuovo impianto, reset PIN, sblocco) in fondo a `schema.sql`.
+
+## Statistiche visite
+
+`statistiche.html` mostra le visite al sito: totali, visitatori, andamento, pagine, orari, dispositivi, provenienza e chi ha inserito dati.
+Il conteggio è anonimo: un id casuale per browser in localStorage, niente cookie, niente IP.
+Per attivarlo esegui `supabase/visits.sql` nel SQL editor (si può rieseguire).
+Per escludere il proprio browser c'è una casella nella pagina, oppure si apre una pagina qualsiasi con `?notrack` (`?track` per riattivare).
