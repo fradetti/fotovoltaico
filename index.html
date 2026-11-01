@@ -21,85 +21,62 @@
       <span class="badge hidden" id="mode-badge" title="I dati inseriti restano solo in questo browser">Modalità locale</span>
       <nav>
         <a href="index.html" aria-current="page">Dashboard</a>
+        <a href="dati.html">Dati</a>
         <a href="inserisci.html">Inserisci</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <h1>Come stanno andando gli impianti</h1>
-    <p class="lede">La resa si misura in <b>kWh prodotti per kWp installato</b>, così impianti di taglia diversa diventano confrontabili.</p>
-
-    <div class="filters" role="group" aria-label="Filtri">
+    <div class="filters" role="group" aria-label="Periodo e impianti">
       <label class="field">Anno <select id="year"></select></label>
-      <div class="field">Impianti <div class="chips" id="plant-chips"></div></div>
+      <label class="field">Trimestre
+        <select id="quarter">
+          <option value="all">Tutto l'anno</option>
+          <option value="1">T1 · gen–mar</option>
+          <option value="2">T2 · apr–giu</option>
+          <option value="3">T3 · lug–set</option>
+          <option value="4">T4 · ott–dic</option>
+          <option value="custom" hidden>Personalizzato</option>
+        </select>
+      </label>
+      <div id="ms-months"></div>
+      <div id="ms-plants"></div>
     </div>
 
-    <section class="kpis" id="kpis" aria-label="Indice di rendimento per impianto"></section>
-
-    <div class="grid">
-      <section class="card">
-        <div class="card-head">
-          <div>
-            <h2 id="line-title">Resa mensile</h2>
-            <p class="sub" id="line-sub">kWh/kWp prodotti in ciascun mese</p>
-          </div>
-          <span class="spacer"></span>
-          <div class="seg" role="group" aria-label="Metrica">
-            <button type="button" data-metric="spec" aria-pressed="true">kWh/kWp mese</button>
-            <button type="button" data-metric="specDay" aria-pressed="false">kWh/kWp al giorno</button>
-          </div>
+    <section class="card">
+      <div class="card-head">
+        <div>
+          <h2 id="rank-title">Classifica</h2>
+          <p class="sub">Ordinata per indice di rendimento: 100 = in linea con la mediana di tutti gli impianti nello stesso mese</p>
         </div>
-        <div class="chart tall"><canvas id="line-chart" aria-label="Resa mensile per impianto"></canvas></div>
-        <div class="legend" id="line-legend"></div>
-      </section>
+      </div>
+      <div class="table-wrap plain"><table class="data rank" id="ranking"></table></div>
+    </section>
 
-      <section class="card half">
-        <div class="card-head">
-          <div>
-            <h2>Classifica dell'anno</h2>
-            <p class="sub">Indice medio di rendimento: 100 = in linea con la mediana del gruppo</p>
-          </div>
+    <section class="card">
+      <div class="card-head">
+        <div>
+          <h2 id="chart-title">Grafico</h2>
+          <p class="sub" id="chart-sub"></p>
         </div>
-        <div class="chart"><canvas id="rank-chart" aria-label="Classifica per indice di rendimento"></canvas></div>
-      </section>
-
-      <section class="card half">
-        <div class="card-head">
-          <div>
-            <h2>Anno su anno</h2>
-            <p class="sub">kWh/kWp mensili dello stesso impianto negli anni</p>
-          </div>
-          <span class="spacer"></span>
-          <select id="yoy-plant" aria-label="Impianto"></select>
+        <span class="spacer"></span>
+        <div class="controls">
+          <label class="field">Grafico
+            <select id="chart-type">
+              <option value="monthly">Andamento mensile</option>
+              <option value="yoy">Anno su anno</option>
+              <option value="rank">Classifica</option>
+              <option value="heat">Mese per mese</option>
+            </select>
+          </label>
+          <label class="field">Unità <select id="chart-unit"></select></label>
+          <label class="field hidden" id="yoy-plant-field">Impianto <select id="yoy-plant"></select></label>
         </div>
-        <div class="chart"><canvas id="yoy-chart" aria-label="Confronto anno su anno"></canvas></div>
-        <div class="legend" id="yoy-legend"></div>
-      </section>
-
-      <section class="card">
-        <div class="card-head">
-          <div>
-            <h2>Mese per mese, chi ha reso di più</h2>
-            <p class="sub">Indice di rendimento: resa giornaliera rispetto alla mediana del gruppo nello stesso mese</p>
-          </div>
-        </div>
-        <div class="heat-wrap"><table class="heat" id="heat"></table></div>
-        <div class="scale"><span>sotto la media</span><span class="bar"></span><span>sopra la media</span></div>
-      </section>
-
-      <section class="card">
-        <div class="card-head">
-          <div>
-            <h2>Dati</h2>
-            <p class="sub" id="table-sub">Tutte le letture dell'anno selezionato</p>
-          </div>
-          <span class="spacer"></span>
-          <label class="check"><input type="checkbox" id="table-all"> tutti gli anni</label>
-        </div>
-        <div class="table-wrap"><table class="data" id="data-table"></table></div>
-      </section>
-    </div>
+      </div>
+      <div id="chart-area"></div>
+      <div class="legend" id="chart-legend"></div>
+    </section>
   </main>
 
   <footer>

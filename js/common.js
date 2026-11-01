@@ -57,17 +57,20 @@ export function monthlyIndex(rows) {
   return out;
 }
 
-/** Riepilogo annuo per impianto. */
-export function yearSummary(rows, idx, year) {
+/**
+ * Riepilogo per impianto su un periodo: anno + insieme di mesi (null = tutti).
+ * spec = somma kWh/kWp; specDay = kWh/kWp medi al giorno; index = media indici mensili.
+ */
+export function periodSummary(rows, idx, year, months = null) {
   const per = new Map();
   for (const r of rows) {
-    if (r.year !== year) continue;
+    if (r.year !== year || (months && !months.has(r.month))) continue;
     const s = per.get(r.plant_id) ?? { plant_id: r.plant_id, kwh: 0, spec: 0, days: 0, months: 0, idx: [] };
     s.kwh += r.kwh;
     s.spec += r.spec;
     s.days += r.days;
     s.months += 1;
-    s.kwp = r.kwp; // ultimo valore (le righe sono ordinate per mese)
+    s.kwp = r.kwp;
     const i = idx.get(`${r.plant_id}-${r.year}-${r.month}`);
     if (i != null) s.idx.push(i);
     per.set(r.plant_id, s);
