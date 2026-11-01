@@ -1,13 +1,13 @@
 -- Generato da scripts/import_sheet.py. Eseguire DOPO schema.sql.
--- I PIN qui sono quelli di sviluppo: cambiarli prima di distribuire il sito.
+-- Gli impianti nascono con un PIN casuale sconosciuto: i PIN reali sono in pins.sql (non versionato).
 begin;
-insert into plants (id, name, pin_hash) values (1, 'Harbi Casa', crypt('0901', gen_salt('bf')));
-insert into plants (id, name, pin_hash) values (2, 'Fradetti', crypt('3540', gen_salt('bf')));
-insert into plants (id, name, pin_hash) values (3, 'Pcoso', crypt('5452', gen_salt('bf')));
-insert into plants (id, name, pin_hash) values (4, 'Pistus', crypt('7414', gen_salt('bf')));
-insert into plants (id, name, pin_hash) values (5, 'Harbi Ufficio', crypt('3796', gen_salt('bf')));
-insert into plants (id, name, pin_hash) values (6, 'Enta', crypt('2657', gen_salt('bf')));
-insert into plants (id, name, pin_hash) values (7, 'Luca69', crypt('9804', gen_salt('bf')));
+insert into plants (id, name, pin_hash) values (1, 'Harbi Casa', extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));
+insert into plants (id, name, pin_hash) values (2, 'Fradetti', extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));
+insert into plants (id, name, pin_hash) values (3, 'Pcoso', extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));
+insert into plants (id, name, pin_hash) values (4, 'Pistus', extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));
+insert into plants (id, name, pin_hash) values (5, 'Harbi Ufficio', extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));
+insert into plants (id, name, pin_hash) values (6, 'Enta', extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));
+insert into plants (id, name, pin_hash) values (7, 'Luca69', extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));
 select setval('plants_id_seq', (select max(id) from plants));
 insert into readings (plant_id, year, month, kwh, kwp, days) values
   (1, 2023, 7, 2720, 16.28, 31),

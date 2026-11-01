@@ -105,11 +105,11 @@ def main() -> int:
         return "'" + s.replace("'", "''") + "'"
 
     sql = ["-- Generato da scripts/import_sheet.py. Eseguire DOPO schema.sql.",
-           "-- I PIN qui sono quelli di sviluppo: cambiarli prima di distribuire il sito.",
+           "-- Gli impianti nascono con un PIN casuale sconosciuto: i PIN reali sono in pins.sql (non versionato).",
            "begin;"]
     for p in plants:
         sql.append(f"insert into plants (id, name, pin_hash) values ({p['id']}, {q(p['name'])}, "
-                   f"crypt({q(pins[str(p['id'])])}, gen_salt('bf')));")
+                   f"extensions.crypt(gen_random_uuid()::text, extensions.gen_salt('bf')));")
     sql.append("select setval('plants_id_seq', (select max(id) from plants));")
     sql.append("insert into readings (plant_id, year, month, kwh, kwp, days) values")
     sql.append(",\n".join(
@@ -117,6 +117,17 @@ def main() -> int:
         for r in seed["readings"]) + ";")
     sql.append("commit;")
     (ROOT / "supabase" / "seed.sql").write_text("\n".join(sql) + "\n")
+
+    # PIN reali per la produzione: 6 cifre, generati una sola volta e mai versionati
+    real_path = ROOT / "supabase" / "pins.sql"
+    if not real_path.exists():
+        lines = ["-- PIN reali (NON committare). Eseguire su Supabase dopo seed.sql, poi distribuire e cancellare questo file.", "begin;"]
+        for pl in plants:
+            pin = f"{secrets.randbelow(10**6):06d}"
+            lines.append(f"update plants set pin_hash = extensions.crypt('{pin}', extensions.gen_salt('bf')) where id = {pl['id']};  -- {pl['name']}: {pin}")
+        lines.append("commit;")
+        real_path.write_text("\n".join(lines) + "\n")
+        print("Generato supabase/pins.sql con i PIN reali")
 
     print("Scritti data/seed.json, data/dev-pins.json, supabase/seed.sql")
     return 0 if ok else 1

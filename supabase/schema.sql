@@ -127,6 +127,6 @@ grant execute on function change_pin(int, text, text) to anon;
 
 -- ------------------------------------------------------------------
 -- Amministrazione (da SQL editor):
---   nuovo impianto:  insert into plants (name, pin_hash) values ('Nome', crypt('1234', gen_salt('bf')));
---   reset PIN:       update plants set pin_hash = crypt('5678', gen_salt('bf')) where name = 'Nome';
+--   nuovo impianto:  insert into plants (name, pin_hash) values ('Nome', extensions.crypt('123456', extensions.gen_salt('bf')));
+--   reset PIN:       update plants set pin_hash = extensions.crypt('654321', extensions.gen_salt('bf')) where name = 'Nome';
 --   sblocco:         delete from pin_failures where plant_id = (select id from plants where name = 'Nome');

@@ -29,7 +29,7 @@ media degli indici mensili. I mesi con un solo impianto non hanno indice.
 1. Crea un progetto su supabase.com.
 2. SQL editor: esegui `supabase/schema.sql`, poi `supabase/seed.sql`.
 3. Imposta PIN reali per ogni impianto:
-   `update plants set pin_hash = crypt('NUOVO', gen_salt('bf')) where name = 'Nome';`
+   `update plants set pin_hash = extensions.crypt('NUOVO', extensions.gen_salt('bf')) where name = 'Nome';`
 4. In `js/config.js` inserisci Project URL e anon key.
 
 Comandi di amministrazione (nuovo impianto, reset PIN, sblocco) in fondo a `schema.sql`.
