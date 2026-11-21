@@ -1,10 +1,11 @@
 # Supabase (piano gratuito) mette in pausa il progetto dopo circa una settimana
-# senza attività. Questo job interroga il database ogni 2 giorni per tenerlo sveglio.
+# senza "sufficiente attività" (secondo i loro documenti: qualche richiesta al giorno).
+# Questo job fa alcune query vere al database 4 volte al giorno.
 name: Tieni sveglio Supabase
 
 on:
   schedule:
-    - cron: "17 6 */2 * *"   # ogni 2 giorni alle 6:17 UTC
+    - cron: "17 */6 * * *"   # ogni 6 ore (al minuto 17, UTC)
   workflow_dispatch:          # avvio manuale dalla tab Actions
 
 permissions:
@@ -20,15 +21,23 @@ jobs:
         run: |
           URL=$(grep -o 'https://[a-z0-9]*\.supabase\.co' js/config.js)
           KEY=$(grep -o 'sb_publishable_[A-Za-z0-9_-]*' js/config.js)
+          H=(-H "apikey: $KEY" -H "Authorization: Bearer $KEY")
+          ok=0
           for i in 1 2 3; do
-            code=$(curl -s -o out.json -w '%{http_code}' -m 30 \
-              "$URL/rest/v1/readings?select=year&limit=1" -H "apikey: $KEY")
-            echo "tentativo $i: HTTP $code $(cat out.json)"
-            [ "$code" = 200 ] && exit 0
+            code=$(curl -s -o out.json -w '%{http_code}' -m 30 "${H[@]}" \
+              "$URL/rest/v1/readings?select=plant_id,year,month,kwh&order=updated_at.desc&limit=20")
+            echo "tentativo $i, letture: HTTP $code"
+            [ "$code" = 200 ] && { ok=1; break; }
             sleep 20
           done
-          echo "::error::Supabase non risponde: probabilmente è in pausa, riattivalo dalla dashboard"
-          exit 1
+          if [ $ok != 1 ]; then
+            echo "::error::Supabase non risponde: probabilmente è in pausa, riattivalo dalla dashboard"
+            exit 1
+          fi
+          # altre query vere (impianti e aggregati delle visite), per sembrare un uso normale del sito
+          curl -sf -m 30 "${H[@]}" "$URL/rest/v1/plants_public?select=id,name" -o /dev/null && echo "impianti: ok"
+          curl -sf -m 30 "${H[@]}" -H "Content-Type: application/json" -X POST \
+            -d '{"p_days":30}' "$URL/rest/v1/rpc/visit_stats" -o /dev/null && echo "statistiche: ok"
       - name: Evita che GitHub disattivi il workflow dopo 60 giorni senza commit
         env:
           GH_TOKEN: ${{ github.token }}
